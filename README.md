@@ -114,3 +114,12 @@ or
 nodemon start (to get your app restarted automatically with any change while you're developing)
 ```
 
+On your browser, you can access the app at
+
+* [http://localhost:8000/krakenflow/index](http://localhost:8000/krakenflow/index)
+
+You can follow the link to the last page 'welcome'. The 'Back' link will send you back to the beginning.
+
+* 'Business' flow will have the choice = true
+* 'Personal' flow will have the choice = false
+
