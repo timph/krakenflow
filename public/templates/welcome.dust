@@ -1,0 +1,8 @@
+{>"layouts/master" /}
+{<body}
+    <h1>{@pre type="content" key="greeting"/}</h1>
+    Your model name = {name};
+    QuerySring = {query};
+    <br/>
+    <a href="{backward}">Back</a> 
+{/body}

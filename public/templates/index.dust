@@ -1,0 +1,15 @@
+{>"layouts/master" /}
+{<body}
+    <h1>{@pre type="content" key="greeting"/}</h1>
+    <h3>
+    <div id="choice">select your choice </div>
+    </h3>
+    Your model name = {name};
+    QuerySring = {query};
+    <form method="POST">
+            <input type='radio' name='choice[option]' value="business"/>Business<br/>
+            <input type='radio' name='choice[option]' value="personal"/>Personal<br/>
+            <input type="hidden" name="_csrf" value="{_csrf}"/>
+            <input type="submit" value="Submit"/> 
+    </form>
+{/body}

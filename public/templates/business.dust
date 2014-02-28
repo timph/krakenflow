@@ -1,0 +1,8 @@
+{>"layouts/master" /}
+{<body}
+    <h1>{@pre type="content" key="greeting"/}</h1>
+    Your model name = {name};
+<br/>
+    <a href="{backward}">Back</a> 
+    <a href="{forward}">Next</a></br>
+{/body}
