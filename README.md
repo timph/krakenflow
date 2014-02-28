@@ -5,7 +5,8 @@ The app is built from KrakenJS with simple build command
 ```bash
 $ yo kraken
 ```
-after you have Node and Kraken set up according to this
+after you have Node and Kraken set up according to this:
+
 1. [Set up your node.js environment](https://github.paypal.com/NodeJS/getting-started/blob/master/README.md)
 2. [Create a kraken application](https://github.com/paypal/kraken-js/blob/master/README.md#getting-started)
 
@@ -60,6 +61,7 @@ module.exports = flow;
 ```
 
 To use flow in your controllers, there are only a few things to keep in mind:
+
 1. In your controller, when you do request.redirect(flow), you need to add flow.baseURI to the flow of choice           
 2. Controllers automatically padded 'express'.requestURI configured in app.json to each URI of app.get/.post() call
 
@@ -106,7 +108,9 @@ A render call just use regular 'home.page' which is the name of your dust templa
 A redirect call, on the other hand, will have to add flow.baseURI to the forwarded URI. It is because ExpressJS only added requestURI that we defined in app.json to all the URL of app.get()/post() calls, so that the app can map your correct app URL to your controller calls.
 
 That is all to it. You can run the app with simple command:
+```bash
 npm start
 or
 nodemon start (to get your app restarted automatically with any change while you're developing)
+```
 
