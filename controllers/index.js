@@ -14,6 +14,11 @@ module.exports = function (app) {
             var queryData = url.parse(req.url, true).query;
             model.name = flow.home.page;
             model.query = JSON.stringify(queryData);
+
+            // check values set from beforeRoutes
+            console.log("req.session.key="+req.session.key);
+            console.log("res.locals.whatever="+res.locals.whatever);
+
             res.render(flow.home.page, model);
     });
 

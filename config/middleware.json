@@ -14,7 +14,8 @@
 //
 //      "compiler": {
 //          "dust": "templates",
-//          "less": "css"
+//          "less": "css",
+//          "sass": "css"
 //      },
 //
 //      "session": {
