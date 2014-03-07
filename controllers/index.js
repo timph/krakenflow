@@ -16,8 +16,13 @@ module.exports = function (app) {
             model.query = JSON.stringify(queryData);
 
             // check values set from beforeRoutes
+            console.log('host=' + req.headers.host);
             console.log("req.session.key="+req.session.key);
-            console.log("res.locals.whatever="+res.locals.whatever);
+            console.log("res.locals="+JSON.stringify(res.locals));
+            console.log("res.locals.context.links="+JSON.stringify(res.locals.context.links));
+
+            model.title = "Famous People";
+            model.names = [{'first':'Larry'},{'first':'Curly'},{'first':'Michael'}];
 
             res.render(flow.home.page, model);
     });

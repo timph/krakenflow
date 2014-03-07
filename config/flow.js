@@ -7,7 +7,7 @@ flow.baseURI = "/krakenflow"; // matching requestURI in app.json
 
 flow.home = { 
                         "page": "index" 
-                        ,"url": "/index" 
+                        ,"url": "/(index|/index/)?" 
                         ,"choice_true": "/index/?choice=true" 
                         ,"choice_false": "/index/?choice=false"
                         };
@@ -17,21 +17,21 @@ flow.home_next = {
                         };
 flow.business = { 
                         "page": "business" 
-                        ,"url": "/business" 
+                        ,"url": "(/business|/business/)?" 
                         ,"collect_info": "/business/info" 
                         ,"moveback": flow.home_next.business
                         ,"next": "/welcome?entity=business" 
                         };
 flow.personal = { 
                         "page": "personal" 
-                        ,"url": "/personal" 
+                        ,"url": "(/personal|/personal/)?" 
                         ,"collect_info": "/personal/info" 
                         ,"moveback": flow.home_next.personal
                         ,"next": "/welcome?entity=personal" 
                         };
 flow.welcome = {
                         "page": "welcome"
-                        ,"url": "/welcome"
+                        ,"url": "(/welcome|/welcome/)?"
                     };
 
 module.exports = flow;

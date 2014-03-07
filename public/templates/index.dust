@@ -12,4 +12,13 @@
             <input type="hidden" name="_csrf" value="{_csrf}"/>
             <input type="submit" value="Submit"/> 
     </form>
+
+    {title}
+    <ul>
+    {#names}<li>{first}</li>{~n}{/names}
+    </ul>
+
+    <br/>context.links={context.links}
+    <br/>context.links.cssBaseUrl={context.links.cssBaseUrl}
+
 {/body}

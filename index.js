@@ -1,8 +1,9 @@
 'use strict';
 
-var flow = require('./config/flow');
-var kraken = require('kraken-js'),
-    app = {};
+var flow = require('./config/flow')
+    ,kraken = require('kraken-js')
+    ,pplinkpath = require('pplinkpath')
+    ,app = {};
 
 
 app.configure = function configure(nconf, next) {
@@ -27,6 +28,11 @@ app.requestBeforeRoute = function requestBeforeRoute(server) {
     // Run before any routes have been added.
     // request interceptor for certain routes
     server.use( function (req, res, next) {
+
+        // set up pp baseURL for css, js and static files
+        pplinkpath.linksBuilder(req.host, res);
+
+        // TEST set up session value
         req.session.key = "check this key";
         res.locals.whatever = "whatever you need or from nconf";
         next();
